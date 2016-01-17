@@ -62,11 +62,11 @@ def GetCoordinate(geo, addr):
                 addr1      = ",".join(addr)
             else:
                 coordinate = geo[addr[0]][addr[1]][list(geo[addr[0]][addr[1]].keys())[2]]
-                #addr1      = ",".join([addr[0], addr[1], geo[addr[0]][addr[1]].keys()[2]])
+                addr1      = ",".join([addr[0], addr[1], list(geo[addr[0]][addr[1]].keys())[2]])
                 addr1 = "~" + addr1
         else:
             coordinate = geo[addr[0]] [list(geo[addr[0]].keys())[0]] [list(geo[addr[0]][list(geo[addr[0]].keys())[0]].keys())[0]]
-            addr1      = ",".join([addr[0], geo[addr[0]].keys()[0], geo[addr[0]][geo[addr[0]].keys()[0]].keys()[0]])
+            addr1      = ",".join([addr[0], list(geo[addr[0]].keys())[0], list(geo[addr[0]][list(geo[addr[0]].keys())[0]].keys())[0]])
             addr1      = "~~" + addr1
     return addr1, coordinate;
 def unique(seq):
