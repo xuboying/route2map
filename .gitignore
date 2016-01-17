@@ -1,0 +1,6 @@
+support
+*.pyc
+index
+*.csv
+*.html
+.DS_Store
